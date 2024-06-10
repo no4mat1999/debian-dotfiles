@@ -5,6 +5,14 @@
 super + e
 	pcmanfm
 
+# Change keyboard language
+super + space
+  {setxkbmap latam, setxkbmap us}
+
+# network manager cli
+super + n
+	cmst
+
 # terminal emulator
 super + Return
 	lxterminal

@@ -1,0 +1,59 @@
+conky.config = {
+  alignment = 'top_left',
+  background = false,
+  border_width = 0.5,
+  cpu_avg_samples = 4,
+  default_outline_color = 'grey',
+  default_shade_color = 'black',
+  draw_borders = true,
+  draw_graph_borders = true,
+  draw_outline = false,
+  draw_shades = false,
+  use_xft = true,
+  font = 'Terminus (TTF):size=12',
+  gap_x = 10,
+  gap_y = 140,
+  imlib_cache_size = 0,
+  maximum_width = 150,
+  minimum_height = 5,
+  minimum_width = 150,
+  mpd_host = '127.0.0.1',
+  mpd_port = 6666,
+  net_avg_samples = 2,
+  double_buffer = true,
+  out_to_console = false,
+  out_to_stderr = false,
+  extra_newline = false,
+  own_window = true,
+  own_window_colour = '000000',
+  own_window_class = 'Conky1',
+  own_window_argb_visual = true,
+  own_window_argb_value = 210,
+  own_window_type = 'desktop',
+  own_window_transparent = false,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  stippled_borders = 0,
+  update_interval = 1,
+  uppercase = false,
+  use_spacer = 'none',
+  show_graph_scale = false,
+  show_graph_range = false,
+  default_color = 'FFFFFF',
+  color1 = 'ffffff',
+  color2 = 'ffffff',
+  color3 = 'ffffff',
+  color4 = 'ffffff'
+}
+
+conky.text = [[
+#$color4${voffset 0}${cpugraph cpu0 10,118 ffffff ffffff}
+$color1${offset 0}${font Terminus (TTF):size=12}${voffset -15}
+${offset -8}${top cpu 1} ${top name 1}
+${offset -8}${top cpu 2} ${top name 2}
+${offset -8}${top cpu 3} ${top name 3}
+${offset -8}${top cpu 4} ${top name 4}
+${offset -8}${top cpu 5} ${top name 5}
+${offset -8}${top cpu 6} ${top name 6}
+${offset -8}${top cpu 7} ${top name 7}
+${offset -8}${top cpu 8} ${top name 8}
+]]

@@ -1,0 +1,51 @@
+conky.config = {
+  alignment = 'top_left',
+  background = false,
+  border_width = 0.5,
+  cpu_avg_samples = 4,
+  default_outline_color = 'grey',
+  default_shade_color = 'black',
+  draw_borders = true,
+  draw_graph_borders = true,
+  draw_outline = false,
+  draw_shades = false,
+  use_xft = true,
+  font = 'Terminus (TTF):size=9',
+  gap_x = 10,
+  gap_y = 215,
+  imlib_cache_size = 0,
+  maximum_width = 120,
+  minimum_height = 20,
+  minimum_width = 120,
+  mpd_host = '127.0.0.1',
+  mpd_port = 6601,
+  net_avg_samples = 2,
+  double_buffer = true,
+  out_to_console = false,
+  out_to_stderr = false,
+  extra_newline = false,
+  own_window = true,
+  own_window_colour = '000000',
+  own_window_class = 'Conky1',
+  own_window_argb_visual = true,
+  own_window_argb_value = 210,
+  own_window_type = 'override',
+  own_window_transparent = false,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  stippled_borders = 0,
+  update_interval = 1,
+  uppercase = false,
+  use_spacer = 'none',
+  show_graph_scale = false,
+  show_graph_range = false,
+  default_color = '131313',
+  color1 = '000000',
+  color2 = 'FFFFFF',
+  color3 = '000000'
+}
+
+conky.text = [[
+${color2}${voffset 0}${font Terminus (TTF):size=18:Regular}${offset 10}${time %H:%M:%S}
+${voffset -10}$font${time %a %d %b}
+${voffset -12}${alignr}$font${execi 300 python3 $HOME/.conky_config/scripts/weather.py}${voffset -12}
+]]

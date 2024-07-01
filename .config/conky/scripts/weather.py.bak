@@ -1,0 +1,18 @@
+import json
+import requests
+
+# https://openweathermap.org/
+
+api_token = 'your api key here'
+api_city = 'your city id here'
+api_units = 'metric'
+api_lang = 'es'
+api_url_base = 'https://api.openweathermap.org/data/2.5/weather'
+
+try:
+	response = requests.get(api_url_base, params={'id':api_city, 'appid':api_token, 'units':api_units, 'lang':api_lang})
+	values = response.json()
+	result = str(values.get('main')['temp']) + ' °C'
+	print(result)
+except:
+	print ('N/A')

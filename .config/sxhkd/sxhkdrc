@@ -3,7 +3,7 @@
 #
 
 super + e
-	pcmanfm
+	nemo
 
 # Change keyboard language
 super + space
